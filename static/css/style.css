@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+html{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    margin-top: 80px;
+}
+
+.header{
+    text-align: center;
+}
+
+.nav{
+    margin-bottom: 3rem;
+    font-size: 1.2rem;
+}
+
+.nav__link{
+    text-decoration: none;
+    color: #1c2023;
+}
+
+.nav__link:not(:last-of-type){
+    margin-right: 2.5rem;
+}
+
+
+.nav__link:hover,
+.nav__link__active{
+    font-weight: bold;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.main__about,
+.main_error{
+    flex-direction: column;
+    max-width: 500px;
+}
+
+p{
+    line-height: 1.35;
+}
+
+p:first-child{
+    font-weight: bold;
+    color: tomato;
+}
+
+.flash{
+    animation-duration: 1s;
+    animation-name: flashing;
+    animation-delay: 0.6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flashing {
+    0%   {opacity: 0;}
+    100% {opacity: 100;}
+  }
+
+.fa-arrow-turn-up{
+    transform: rotate(90deg);
+    margin-right: 10px;
+}
+
+.main__content{
+    width: fit-content;
+    margin: auto;
+}
+
+.contact{
+    display: flex;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.contact__details{
+    margin-left: 1ch;
+}
+
+.contact__link{
+    color: black;
+    text-decoration: none;
+    box-shadow: 0 3px 0 0 tomato;
+    transition: all 0.3s ease;
+}
+
+.contact__link:hover{
+    color: tomato;
+    box-shadow: 0 0 0 0;
+}
+
+.project_card_image{
+    width: 350px;
+    transition: all 0.3s ease;
+}
+
+
+
+.u_bare_link{
+    text-decoration: none;
+}
+
+.container{
+    position: relative;
+    width: 350px;
+    height: 180px;
+    border: 1px solid black;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    background-color: #1c202371;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.container:hover::before{
+    background-color: transparent;
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1.25rem;
+    justify-content: center;
+    justify-items: center;
+    max-width: 21.875rem;
+    margin: auto;
+}
+
+@media(min-width: 48.75em){
+    .projects{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 45rem;
+    }
+}
+
+@media(min-width: 70em){
+    .projects{
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 68rem;
+    }
+}
+
+.project_card_meta{
+    padding: 0 1.25rem;
+}
+
+a h2{
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    color: #1c2023;
+}
+
+.project_card:hover h2{
+    text-decoration: underline;
+}
+
+.categories{
+    display: flex;
+    padding: 0;
+    margin: 0.75rem 0 0.75rem;
+    color: tomato;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.075rem;
+    font-weight: 600;
+}
+
+.categories_tags:not(:last-of-type)::after{
+    content: "|";
+    margin: 0 0.25rem;
+}
+
+.u_bare_link{
+    text-decoration: none;
+    margin-bottom: 30px;
+}
+
+
+.hero{
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.project{
+    display: flex;
+    margin: auto;
+    max-width: 50rem;
+    flex-direction: column;
+    font-size: 1.2rem;
+    padding: 0 1rem;
+}
+
+.project_content{
+    margin-bottom: 1rem;
+    line-height: 150%;
+}
+
+@media(min-width: 48.75rem){
+    .project{
+        flex-direction: row;
+        padding: 0;
+    }
+}
+
+.project_content{
+    
+    flex: 7;
+    margin-right: 3rem;
+    padding: 0;
+}
+
+.project_heading{
+    margin: 0;
+    font-size: 2rem;
+    line-height: 150%;
+}
+
+.project_heading_meta{
+    font-size: inherit;
+    margin-bottom: 1rem;
+}
+
+.project_meta_group{
+    margin-bottom: 1rem;
+}
+
+.project_meta_group, .cta{
+    padding: 1rem;
+    background-color: #d4eafa;
+    border-radius: 6px;
+}
+
+.technology_list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0.75rem;
+    line-height: 1.75rem;
+}

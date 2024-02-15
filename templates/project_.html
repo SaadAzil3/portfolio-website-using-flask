@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+    <main class="main main_project">
+        <div>
+            <img 
+            class="hero"
+            src="{{url_for('static', filename=project['hero'])}}" 
+            alt="{{name}}"
+            >
+            <article class="project">
+                <article class="project_content">
+                    <h2 class="project_heading">
+                        {{name}}
+                    </h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sit velit minus debitis quibusdam impedit, pariatur fugiat, vitae minima libero voluptatum sed blanditiis, repellendus laudantium maiores nesciunt iste alias facere.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quasi iste tempore ratione et quia aliquid aperiam facere inventore, pariatur dignissimos rem, animi porro exercitationem repellendus, excepturi nihil repudiandae! Cumque.</p>
+                </article>
+                <section>
+                    <article class="project_meta_group">
+                        <h3 class="project_heading project_heading_meta">
+                            Technologies used
+                        </h3>
+                        <ul class="technology_list">
+                            {% for category in project['categories'] %}
+                                <li class="technology_list_item">{{category}}</li>
+                            {% endfor %}
+                        </ul>
+
+                    </article>
+
+                </section>
+            </article>
+        </div>
+    </main>
+{% endblock %}
